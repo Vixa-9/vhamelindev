@@ -233,9 +233,10 @@ startFill();
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
 const MSG = {
-  fr: { invalid: 'Merci de remplir correctement tous les champs.', sending: 'Envoi en cours...', ok: 'Votre message a bien été envoyé.', error: "L'envoi a échoué. Vous pouvez m'écrire à vhamelindev@gmail.com." },
-  en: { invalid: 'Please fill in all fields correctly.', sending: 'Sending...', ok: 'Your message has been sent.', error: 'Sending failed. You can email me at vhamelindev@gmail.com.' },
+  fr: { invalid: 'Merci de remplir correctement tous les champs.', sending: 'Envoi en cours...', ok: 'Votre message a bien été envoyé.', tooMany: 'Trop de messages envoyés, réessayez dans quelques minutes.', error: "L'envoi a échoué. Vous pouvez m'écrire à vhamelindev@gmail.com." },
+  en: { invalid: 'Please fill in all fields correctly.', sending: 'Sending...', ok: 'Your message has been sent.', tooMany: 'Too many messages sent, please try again in a few minutes.', error: 'Sending failed. You can email me at vhamelindev@gmail.com.' },
 };
+const CONTACT_TIMEOUT = 20_000;
 
 function setStatus(text, kind = '') {
   statusEl.textContent = text;
@@ -259,19 +260,32 @@ form.addEventListener('submit', async e => {
   button.disabled = true;
   setStatus(m.sending);
 
+  // Sans réponse au bout de 20 s, on abandonne plutôt que de laisser le visiteur attendre
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), CONTACT_TIMEOUT);
+
   try {
-    // Le serveur lit du x-www-form-urlencoded (express.urlencoded)
     const res = await fetch('/api/contact', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      signal: controller.signal,
     });
-    if (!res.ok) throw new Error(await res.text());
-    form.reset();
-    setStatus(m.ok, 'ok');
+    const data = await res.json().catch(() => ({}));
+    if (res.ok && data.ok) {
+      form.reset();
+      setStatus(m.ok, 'ok');
+    } else if (res.status === 400) {
+      setStatus(m.invalid, 'error');
+    } else if (res.status === 429) {
+      setStatus(m.tooMany, 'error');
+    } else {
+      setStatus(m.error, 'error');
+    }
   } catch (err) {
-    setStatus(m.error, 'error');
+    setStatus(m.error, 'error'); // réseau coupé ou délai dépassé
   } finally {
+    clearTimeout(timer);
     button.disabled = false;
   }
 });

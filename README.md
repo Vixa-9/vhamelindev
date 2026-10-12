@@ -81,26 +81,47 @@ docker run --rm -p 3000:3000 vhamelindev
 
 ## Formulaire de contact
 
-`POST /api/contact` (`server.js`) :
+`POST /api/contact` (`server.js`). Même comportement que Worduel : les deux sont à garder en phase.
 
-- champs `name`, `email`, `message`, envoyés en `application/x-www-form-urlencoded` ;
-- champ caché `honeypot` : s'il est rempli (robot), le serveur répond « envoyé » sans rien envoyer ;
-- limites : 100 caractères pour le nom, 200 pour l'e-mail, 5 000 pour le message, format d'e-mail vérifié ;
-- 5 messages maximum par adresse IP toutes les 15 minutes ;
-- envoi par SMTP sur le port 587 (STARTTLS), avec l'adresse du visiteur en `Reply-To`.
+| Cas | Réponse |
+|---|---|
+| Message envoyé | `200 { "ok": true }` |
+| Champ `honeypot` rempli (robot) | `200 { "ok": true }`, rien n'est envoyé |
+| Champ manquant, trop long ou e-mail invalide | `400 { "error": "..." }` |
+| Plus de 5 messages par IP en 15 minutes | `429 { "error": "..." }` |
+| Configuration incomplète ou envoi SMTP en échec | `500 { "error": "..." }` |
+
+- Champs `name`, `email`, `message`, en JSON (ou formulaire encodé) ; limites 100, 200 et 5 000 caractères.
+- Les retours à la ligne sont retirés du nom et de l'e-mail avant de les mettre dans les en-têtes du mail.
+- Mail envoyé : sujet `[Portfolio] Message de {nom}`, corps « Nom / Email / Message », `Reply-To` = e-mail du visiteur.
+- Délais SMTP : 10 s pour la connexion et l'accueil du serveur, 15 s d'inactivité. Le navigateur abandonne au bout de 20 s.
+
+Au démarrage, le serveur indique dans ses logs quelles variables sont définies (jamais leurs valeurs),
+puis teste la connexion SMTP :
+
+```
+[contact] SMTP_HOST défini, SMTP_USER défini, SMTP_PASS défini, MAIL_FROM défini, MAIL_TO par défaut, port 2525
+[contact] connexion SMTP vérifiée
+```
+
+Chaque envoi est journalisé : `[contact] message envoyé (...)` ou `[contact] envoi échoué : CODE message`
+(`ETIMEDOUT` : port bloqué ou hôte injoignable, `EAUTH` : identifiants refusés, `EENVELOPE` : expéditeur ou destinataire refusé).
 
 ---
 
 ## Variables d'environnement
 
-| Variable | Rôle |
-|---|---|
-| `PORT` | Port d'écoute (3000) |
-| `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS` | Serveur d'envoi des messages du formulaire |
-| `MAIL_TO` | Destinataire des messages (`vhamelindev@gmail.com` par défaut) |
-| `MAIL_FROM` | Expéditeur (`SMTP_USER` par défaut) |
+Mêmes variables que Worduel, saisies dans Dokploy (jamais dans le dépôt).
 
-En production, elles sont saisies dans Dokploy, jamais dans le dépôt.
+| Variable | Obligatoire | Rôle |
+|---|---|---|
+| `SMTP_HOST` | oui | `smtp-relay.brevo.com` |
+| `SMTP_PORT` | non | Port SMTP, `587` par défaut. **Mettre `2525` sur le VPS**, qui bloque les ports 25, 465 et 587 en sortie |
+| `SMTP_USER` | oui | Identifiant SMTP Brevo (`xxx@smtp-brevo.com`) |
+| `SMTP_PASS` | oui | Clé SMTP Brevo |
+| `MAIL_FROM` | oui | Expéditeur, sur un domaine validé dans Brevo. Jamais l'identifiant `@smtp-brevo.com` |
+| `MAIL_TO` | non | Destinataire, `vhamelindev@gmail.com` par défaut |
+| `PORT` | non | Port d'écoute du serveur, `3000` par défaut |
 
 ---
 
