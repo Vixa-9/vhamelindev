@@ -11,7 +11,7 @@ qui gère aussi le formulaire de contact.
 |---|---|
 | `site/` | Le site : `index.html`, `style.css`, `main.js`, `asset/` |
 | `server.js` | Serveur Express : fichiers statiques et route `POST /api/contact` |
-| `.github/workflows/deploy.yml` | Déploiement automatique sur le serveur à chaque push sur `main` |
+| `Dockerfile` | Image de production, déployée par Dokploy à chaque push sur `main` |
 
 ## Lancer en local
 
