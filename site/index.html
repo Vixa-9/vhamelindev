@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Hamelin | Ingénieur logiciel</title>
+  <meta name="description" content="Victor Hamelin, élève ingénieur à l'ISEN Brest, développeur en alternance à la Marine nationale. Développement web full-stack.">
+  <meta property="og:title" content="Victor Hamelin | Ingénieur logiciel">
+  <meta property="og:description" content="Élève ingénieur à l'ISEN Brest, développeur en alternance à la Marine nationale.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0f1e">
+  <link rel="icon" href="asset/logo1.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+      else if (matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.dataset.theme = 'light';
+      const l = localStorage.getItem('lang');
+      if (l) document.documentElement.lang = l;
+    } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Victor Hamelin",
+    "jobTitle": "Ingénieur logiciel",
+    "alumniOf": "ISEN Brest",
+    "email": "mailto:vhamelindev@gmail.com",
+    "sameAs": ["https://github.com/Vixa-9", "https://www.linkedin.com/in/victor-hamelin9/"]
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main"><span class="fr">Aller au contenu</span><span class="en">Skip to content</span></a>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#top" class="logo">Victor Hamelin</a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Navigation">
+      <a href="#about"><span class="fr">Profil</span><span class="en">Profile</span></a>
+      <a href="#skills"><span class="fr">Compétences</span><span class="en">Skills</span></a>
+      <a href="#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="#experience"><span class="fr">Expérience</span><span class="en">Experience</span></a>
+      <a href="#contact">Contact</a>
+      <span class="nav__indicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="langToggle" type="button" aria-label="Switch language">
+        <span class="fr">EN</span><span class="en">FR</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Thème">
+        <i class="fa-solid fa-moon theme-dark"></i><i class="fa-solid fa-sun theme-light"></i>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Accueil -->
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__aurora"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__grid hero__grid--lit"></div>
+  </div>
+
+  <div class="container">
+    <p class="hero__kicker reveal"><span class="fr">Développeur full-stack · Élève ingénieur</span><span class="en">Full-stack developer · Engineering student</span></p>
+
+    <h1 class="hero__title"><span class="line"><span>Victor</span></span> <span class="line"><span>Hamelin</span></span></h1>
+
+    <p class="hero__lead reveal">
+      <span class="fr">Apprenti ingénieur à l'ISEN Brest et développeur d'applications web à la Marine nationale.
+      Quatre ans d'alternance au ministère des Armées et un stage de trois mois au Vietnam, du support informatique au développement full-stack.</span>
+      <span class="en">Apprentice engineer at ISEN Brest and web application developer at the French Navy.
+      Four years of work-study at the Ministry of the Armed Forces and a three-month internship in Vietnam, from IT support to full-stack development.</span>
+    </p>
+
+    <div class="hero__cta reveal">
+      <a href="#projects" class="btn btn--primary"><span class="fr">Voir les projets</span><span class="en">View projects</span></a>
+      <a href="#contact" class="btn btn--ghost"><span class="fr">Me contacter</span><span class="en">Contact me</span></a>
+    </div>
+
+    <dl class="hero__meta reveal">
+      <div>
+        <dt><span class="fr">Poste actuel</span><span class="en">Current role</span></dt>
+        <dd><span class="fr">Développeur web, Marine nationale</span><span class="en">Web developer, French Navy</span></dd>
+      </div>
+      <div>
+        <dt><span class="fr">Formation</span><span class="en">Education</span></dt>
+        <dd><span class="fr">Cycle ingénieur généraliste, ISEN Brest</span><span class="en">General engineering degree, ISEN Brest</span></dd>
+      </div>
+      <div>
+        <dt><span class="fr">Langues</span><span class="en">Languages</span></dt>
+        <dd><span class="fr">Anglais C1 (TOEIC), espagnol B1</span><span class="en">English C1 (TOEIC), Spanish B1</span></dd>
+      </div>
+      <div>
+        <dt><span class="fr">Localisation</span><span class="en">Location</span></dt>
+        <dd><span class="fr">Brest, véhiculé</span><span class="en">Brest, France</span></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+
+<div class="marquee" aria-label="Technologies">
+  <ul class="marquee__track">
+      <li><img src="asset/skill/typescript.svg" alt="">TypeScript</li>
+      <li><img src="asset/skill/angular.svg" alt="">Angular</li>
+      <li><img src="asset/skill/react.svg" alt="">React</li>
+      <li><img src="asset/skill/nodejs.png" alt="">Node.js</li>
+      <li><i class="fa-solid fa-code"></i>NestJS</li>
+      <li><i class="fa-solid fa-code"></i>Socket.io</li>
+      <li><img src="asset/skill/postgresql.svg" alt="">PostgreSQL</li>
+      <li><img src="asset/skill/mysql.svg" alt="">MySQL</li>
+      <li><img src="asset/skill/php.svg" alt="">PHP</li>
+      <li><img src="asset/skill/docker.png" alt="">Docker</li>
+      <li><i class="fa-solid fa-code"></i>Three.js</li>
+      <li><img src="asset/skill/java.svg" alt="">Java</li>
+      <li><img src="asset/skill/python.svg" alt="">Python</li>
+      <li><img src="asset/skill/git.svg" alt="">Git</li>
+      <li aria-hidden="true"><img src="asset/skill/typescript.svg" alt="">TypeScript</li>
+      <li aria-hidden="true"><img src="asset/skill/angular.svg" alt="">Angular</li>
+      <li aria-hidden="true"><img src="asset/skill/react.svg" alt="">React</li>
+      <li aria-hidden="true"><img src="asset/skill/nodejs.png" alt="">Node.js</li>
+      <li aria-hidden="true"><i class="fa-solid fa-code"></i>NestJS</li>
+      <li aria-hidden="true"><i class="fa-solid fa-code"></i>Socket.io</li>
+      <li aria-hidden="true"><img src="asset/skill/postgresql.svg" alt="">PostgreSQL</li>
+      <li aria-hidden="true"><img src="asset/skill/mysql.svg" alt="">MySQL</li>
+      <li aria-hidden="true"><img src="asset/skill/php.svg" alt="">PHP</li>
+      <li aria-hidden="true"><img src="asset/skill/docker.png" alt="">Docker</li>
+      <li aria-hidden="true"><i class="fa-solid fa-code"></i>Three.js</li>
+      <li aria-hidden="true"><img src="asset/skill/java.svg" alt="">Java</li>
+      <li aria-hidden="true"><img src="asset/skill/python.svg" alt="">Python</li>
+      <li aria-hidden="true"><img src="asset/skill/git.svg" alt="">Git</li>
+  </ul>
+</div>
+
+<!-- Profil -->
+<section class="section" id="about">
+  <div class="container split">
+    <h2 class="section__title reveal"><span class="fr">Profil</span><span class="en">Profile</span></h2>
+
+    <div class="split__body reveal">
+      <p class="fr">
+        Après un bac général scientifique, j'ai choisi l'alternance pour apprendre au contact du terrain.
+        J'ai préparé un BTS SIO option développement en travaillant comme technicien informatique au
+        GSBDD Brest-Lorient : installation et sécurisation des postes, support aux utilisateurs, suivi des incidents
+        et refonte de l'arborescence réseau pour 1 500 utilisateurs.
+      </p>
+      <p class="en">
+        After a general scientific baccalaureate, I chose work-study to learn on the job. I completed a BTS SIO
+        (software development option) while working as an IT technician at GSBDD Brest-Lorient: installing and securing
+        workstations, user support, incident tracking and redesigning the network structure for 1,500 users.
+      </p>
+      <p class="fr">
+        Depuis 2024, je suis le cycle ingénieur de l'ISEN Brest par apprentissage et je développe des applications web
+        internes au laboratoire numérique de la Marine nationale. En 2026, j'ai effectué mon stage international à
+        l'université de Tien Giang, au Vietnam, où j'ai repris et livré le système d'information de la faculté
+        d'ingénierie. Sur mon temps libre, je crée des jeux multijoueurs en ligne pour approfondir le temps réel.
+      </p>
+      <p class="en">
+        Since 2024 I have been following the ISEN Brest engineering programme as an apprentice, building internal web
+        applications at the French Navy's digital laboratory. In 2026 I did my international internship at Tien Giang
+        University, Vietnam, where I took over and delivered the information system of the Faculty of Engineering.
+        In my spare time I build online multiplayer games to go deeper into real-time systems.
+      </p>
+
+      <div class="interests">
+        <h3><span class="fr">En dehors du travail</span><span class="en">Outside work</span></h3>
+        <div class="race">
+          <div class="race__icon"><i class="fa-solid fa-person-running"></i></div>
+          <div class="race__text">
+            <p class="race__title"><span class="fr">20&nbsp;km de Paris 2025, sous les couleurs du SCA</span><span class="en">20&nbsp;km de Paris 2025, running for the SCA</span></p>
+            <p class="fr">J'ai représenté le Service du commissariat des armées sur cette course et l'ai terminée en 1&nbsp;h&nbsp;31.</p>
+            <p class="en">I represented the Armed Forces Commissariat Service in the race, finishing in 1:31.</p>
+          </div>
+          <p class="race__time mono">1:31</p>
+        </div>
+
+        <div class="passions">
+          <p class="passions__title"><span class="fr">Passions</span><span class="en">Passions</span></p>
+          <ul class="passions__list">
+            <li><i class="fa-solid fa-futbol"></i><h4>Football</h4></li>
+            <li><i class="fa-solid fa-water"></i><h4>Surf</h4></li>
+            <li><i class="fa-solid fa-earth-asia"></i><h4><span class="fr">Voyage</span><span class="en">Travel</span></h4></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compétences -->
+<section class="section section--alt" id="skills">
+  <div class="container split">
+    <h2 class="section__title reveal"><span class="fr">Compétences</span><span class="en">Skills</span></h2>
+
+    <div class="split__body">
+      <div class="skill-row reveal">
+        <h3>Front-end</h3>
+        <ul class="chips">
+          <li><img src="asset/skill/angular.svg" alt="">Angular</li>
+          <li><img src="asset/skill/react.svg" alt="">React</li>
+          <li><img src="asset/skill/typescript.svg" alt="">TypeScript</li>
+          <li><img src="asset/skill/js.svg" alt="">JavaScript</li>
+          <li><img src="asset/skill/html.svg" alt="">HTML / CSS</li>
+          <li><img src="asset/skill/tailwindcss.png" alt="">Tailwind CSS</li>
+          <li>Three.js</li>
+          <li>Chart.js</li>
+        </ul>
+      </div>
+
+      <div class="skill-row reveal">
+        <h3>Back-end</h3>
+        <ul class="chips">
+          <li><img src="asset/skill/nodejs.png" alt="">Node.js</li>
+          <li>Express</li>
+          <li>NestJS</li>
+          <li>Socket.io</li>
+          <li><img src="asset/skill/php.svg" alt="">PHP</li>
+          <li>Laravel</li>
+        </ul>
+      </div>
+
+      <div class="skill-row reveal">
+        <h3><span class="fr">Autres langages</span><span class="en">Other languages</span></h3>
+        <ul class="chips">
+          <li><img src="asset/skill/java.svg" alt="">Java</li>
+          <li><img src="asset/skill/python.svg" alt="">Python</li>
+          <li><img src="asset/skill/csharp.svg" alt="">C#</li>
+          <li><img src="asset/skill/c.png" alt="">C</li>
+          <li>VBA</li>
+        </ul>
+      </div>
+
+      <div class="skill-row reveal">
+        <h3><span class="fr">Bases de données</span><span class="en">Databases</span></h3>
+        <ul class="chips">
+          <li><img src="asset/skill/mysql.svg" alt="">MySQL</li>
+          <li><img src="asset/skill/postgresql.svg" alt="">PostgreSQL</li>
+          <li><img src="asset/skill/mariadb.svg" alt="">MariaDB</li>
+          <li>phpMyAdmin</li>
+          <li>Sequelize</li>
+          <li>Prisma</li>
+        </ul>
+      </div>
+
+      <div class="skill-row reveal">
+        <h3><span class="fr">DevOps et outils</span><span class="en">DevOps and tools</span></h3>
+        <ul class="chips">
+          <li><img src="asset/skill/docker.png" alt="">Docker</li>
+          <li><img src="asset/skill/git.svg" alt="">Git</li>
+          <li><img src="asset/skill/github.svg" alt="">GitHub</li>
+          <li><img src="asset/skill/railway.png" alt="">Railway</li>
+        </ul>
+      </div>
+
+      <div class="skill-row reveal">
+        <h3><span class="fr">Systèmes et support</span><span class="en">Systems and support</span></h3>
+        <ul class="chips">
+          <li><span class="fr">Installation de postes</span><span class="en">Workstation setup</span></li>
+          <li><span class="fr">Sécurité des postes</span><span class="en">Workstation security</span></li>
+          <li><span class="fr">Gestion des droits d'accès</span><span class="en">Access rights management</span></li>
+          <li><span class="fr">Support utilisateurs</span><span class="en">User support</span></li>
+          <li><span class="fr">Suivi d'incidents</span><span class="en">Incident tracking</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projets -->
+<section class="section" id="projects">
+  <div class="container">
+    <h2 class="section__title reveal"><span class="fr">Projets</span><span class="en">Projects</span></h2>
+
+    <div class="projects">
+
+      <article class="project project--wide reveal">
+        <div class="project__visual project__visual--norn" aria-hidden="true">
+          <div class="scene3d">
+            <div class="cube cube--a">
+              <img class="cube__face cube__face--right" src="asset/norndice/MELEE_ATTACK.png" alt="">
+              <img class="cube__face cube__face--left" src="asset/norndice/RANGED_DEFENSE.png" alt="">
+              <img class="cube__face cube__face--top" src="asset/norndice/GOLDEN_RANGED_ATTACK.png" alt="">
+              <img class="cube__face cube__face--bottom" src="asset/norndice/GOLDEN_STEAL.png" alt="">
+              <img class="cube__face cube__face--front" src="asset/norndice/MELEE_DEFENSE.png" alt="">
+              <img class="cube__face cube__face--back" src="asset/norndice/MELEE_ATTACK.png" alt="">
+            </div>
+            <div class="cube cube--b">
+              <img class="cube__face cube__face--right" src="asset/norndice/MELEE_ATTACK.png" alt="">
+              <img class="cube__face cube__face--left" src="asset/norndice/GOLDEN_RANGED_DEFENSE.png" alt="">
+              <img class="cube__face cube__face--top" src="asset/norndice/RANGED_ATTACK.png" alt="">
+              <img class="cube__face cube__face--bottom" src="asset/norndice/MELEE_DEFENSE.png" alt="">
+              <img class="cube__face cube__face--front" src="asset/norndice/GOLDEN_STEAL.png" alt="">
+              <img class="cube__face cube__face--back" src="asset/norndice/MELEE_ATTACK.png" alt="">
+            </div>
+          </div>
+          <div class="table-shadow"></div>
+        </div>
+        <div class="project__body">
+          <p class="project__meta mono"><span class="fr">2026 · Projet personnel</span><span class="en">2026 · Personal project</span></p>
+          <h3>Norndice</h3>
+          <p class="fr">
+            Jeu de dés viking en ligne, en 3D, inspiré de l'Norndice. Deux joueurs s'affrontent en temps réel,
+            avec un mode contre l'IA (quatre niveaux), des parties classées et la reprise d'une partie après une déconnexion.
+          </p>
+          <p class="en">
+            Online 3D Viking dice game inspired by Norndice. Two players compete in real time, with a mode against
+            the AI (four levels), ranked matches and resuming a game after a disconnection.
+          </p>
+          <ul class="points">
+            <li class="fr">Le serveur NestJS tire les dés et résout chaque manche, le client se charge uniquement de l'affichage.</li>
+            <li class="en">The NestJS server rolls the dice and resolves each round; the client only handles display.</li>
+            <li class="fr">Règles du jeu isolées dans un package TypeScript testé avec Vitest et réutilisé par l'IA.</li>
+            <li class="en">Game rules isolated in a TypeScript package tested with Vitest and reused by the AI.</li>
+            <li class="fr">Scène 3D avec moteur physique (React Three Fiber, cannon-es), partagée entre le web et le mobile.</li>
+            <li class="en">3D scene with a physics engine (React Three Fiber, cannon-es), shared between web and mobile.</li>
+            <li class="fr">Monorepo pnpm et Turborepo, base PostgreSQL avec Prisma, Docker.</li>
+            <li class="en">pnpm and Turborepo monorepo, PostgreSQL database with Prisma, Docker.</li>
+          </ul>
+          <ul class="tags mono">
+            <li>TypeScript</li><li>NestJS</li><li>Socket.io</li><li>React</li><li>Three.js</li><li>PostgreSQL</li><li>Docker</li>
+          </ul>
+          <a href="https://norndice.com" target="_blank" rel="noopener" class="btn btn--small">
+            <span class="fr">Voir le site</span><span class="en">Visit site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="project project--wide reveal">
+        <div class="project__visual project__visual--word" aria-hidden="true">
+          <div class="tiles mono">
+            <span class="t t--ok" style="--i:0">W</span><span class="t t--no" style="--i:1">O</span><span class="t t--mid" style="--i:2">R</span><span class="t t--no" style="--i:3">D</span><span class="t t--ok" style="--i:4">U</span><span class="t t--no" style="--i:5">E</span><span class="t t--ok" style="--i:6">L</span>
+          </div>
+        </div>
+        <div class="project__body">
+          <p class="project__meta mono"><span class="fr">2026 · Projet personnel</span><span class="en">2026 · Personal project</span></p>
+          <h3>Worduel</h3>
+          <p class="fr">
+            Jeu de mots inspiré de Wordle, en solo ou en multijoueur jusqu'à six joueurs par salle privée,
+            avec des modes série et chrono et un classement journalier.
+          </p>
+          <p class="en">
+            Word game inspired by Wordle, solo or multiplayer with up to six players per private room,
+            with series and timed modes and a daily leaderboard.
+          </p>
+          <ul class="points">
+            <li class="fr">Synchronisation des parties en temps réel avec Socket.io et reprise après rechargement de la page.</li>
+            <li class="en">Real-time game synchronisation with Socket.io and resume after page reload.</li>
+            <li class="fr">Vote d'exclusion à la majorité, limitation du nombre de requêtes, déploiement avec Docker.</li>
+            <li class="en">Majority vote-kick, request rate limiting, deployment with Docker.</li>
+          </ul>
+          <ul class="tags mono"><li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>Socket.io</li><li>Docker</li></ul>
+          <a href="https://leworduel.fr" target="_blank" rel="noopener" class="btn btn--small">
+            <span class="fr">Voir le site</span><span class="en">Visit site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="project project--stacked reveal">
+        <div class="project__visual gallery gallery--browser" data-gallery>
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>tgu.edu.vn</span></div>
+          <div class="gallery__track">
+            <img src="asset/projets/tgu/accueil.webp" alt="Page d'accueil du site de la faculté" loading="lazy">
+            <img src="asset/projets/tgu/admin-analytics.webp" alt="Tableau de bord de fréquentation" loading="lazy">
+            <img src="asset/projets/tgu/admin-actualites.webp" alt="Gestion des actualités dans l'administration" loading="lazy">
+            <img src="asset/projets/tgu/article.webp" alt="Article publié sur le site" loading="lazy">
+          </div>
+          <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="gallery__btn gallery__btn--next" type="button" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="gallery__dots"></div>
+        </div>
+        <div class="project__body">
+          <p class="project__meta mono"><span class="fr">2026 · Stage international, Vietnam</span><span class="en">2026 · International internship, Vietnam</span></p>
+          <h3><span class="fr">Système d'information de faculté</span><span class="en">Faculty information system</span></h3>
+          <p class="fr">
+            Site et espace d'administration de la faculté d'ingénierie de l'université de Tien Giang. J'ai repris
+            une application Laravel incomplète pour en faire un outil que le personnel gère seul, en anglais et en vietnamien.
+          </p>
+          <p class="en">
+            Website and admin area for the Faculty of Engineering at Tien Giang University. I took over an unfinished
+            Laravel application and turned it into a tool the staff manage on their own, in English and Vietnamese.
+          </p>
+          <ul class="points">
+            <li class="fr">Audit du code existant : sept anomalies corrigées, dont une empreinte de mot de passe publiée dans le dépôt.</li>
+            <li class="en">Audit of the existing code: seven issues fixed, including a password hash committed to the repository.</li>
+            <li class="fr">Six nouveaux modules, dont les enseignants, les départements, la recherche et les projets étudiants, plus un module d'actualités.</li>
+            <li class="en">Six new modules, including lecturers, departments, research and student projects, plus a news module.</li>
+            <li class="fr">Tableau de bord de fréquentation (middleware de suivi, adresses IP hachées, graphiques Chart.js).</li>
+            <li class="en">Traffic dashboard (tracking middleware, hashed IP addresses, Chart.js charts).</li>
+            <li class="fr">Sécurité (CSRF, contrôle des fichiers envoyés, en-têtes HTTP), recette utilisateur validée à 19 sur 19.</li>
+            <li class="en">Security (CSRF, upload validation, HTTP headers), user acceptance testing passed 19 out of 19.</li>
+          </ul>
+          <ul class="tags mono"><li>Laravel</li><li>PHP</li><li>MySQL</li><li>Chart.js</li><li>AdminLTE</li></ul>
+        </div>
+      </article>
+
+      <div class="projects__grid">
+        <article class="project reveal">
+          <div class="project__visual gallery" data-gallery>
+            <div class="gallery__track">
+              <img src="asset/projets/goalcalendar/goal-calendar1.webp" alt="Goal Calendar" loading="lazy">
+              <img src="asset/projets/goalcalendar/goal-calendar2.webp" alt="Goal Calendar" loading="lazy">
+              <img src="asset/projets/goalcalendar/goal-calendar3.webp" alt="Goal Calendar" loading="lazy">
+              <img src="asset/projets/goalcalendar/goal-calendar4.webp" alt="Goal Calendar" loading="lazy">
+            </div>
+            <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="gallery__btn gallery__btn--next" type="button" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="gallery__dots"></div>
+          </div>
+          <div class="project__body">
+            <p class="project__meta mono">2025</p>
+            <h3>Goal Calendar</h3>
+            <p class="fr">Application web de suivi des activités sportives, de la nutrition et des dépenses. Front-end Angular, API Node.js avec Sequelize et MySQL, déploiement continu sur Railway.</p>
+            <p class="en">Web app to track sports activities, nutrition and expenses. Angular front end, Node.js API with Sequelize and MySQL, continuous deployment on Railway.</p>
+            <ul class="tags mono"><li>Angular</li><li>Node.js</li><li>Sequelize</li><li>MySQL</li></ul>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__visual gallery" data-gallery>
+            <div class="gallery__track">
+              <img src="asset/projets/bibliodrive2/1.webp" alt="Biblio-Drive" loading="lazy">
+              <img src="asset/projets/bibliodrive2/2.webp" alt="Biblio-Drive" loading="lazy">
+              <img src="asset/projets/bibliodrive2/3.webp" alt="Biblio-Drive" loading="lazy">
+              <img src="asset/projets/bibliodrive2/4.webp" alt="Biblio-Drive" loading="lazy">
+              <img src="asset/projets/bibliodrive2/admin.webp" alt="Biblio-Drive" loading="lazy">
+            </div>
+            <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="gallery__btn gallery__btn--next" type="button" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="gallery__dots"></div>
+          </div>
+          <div class="project__body">
+            <p class="project__meta mono">2024</p>
+            <h3>Biblio-Drive</h3>
+            <p class="fr">Système d'emprunt de livres en ligne pour une médiathèque, avec espace d'administration en PHP, puis application de gestion du fonds documentaire en Java Swing.</p>
+            <p class="en">Online book-borrowing system for a library with a PHP admin area, followed by a Java Swing collection management application.</p>
+            <ul class="tags mono"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>Java</li></ul>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Expérience -->
+<section class="section section--alt" id="experience">
+  <div class="container">
+    <h2 class="section__title reveal"><span class="fr">Expérience</span><span class="en">Experience</span></h2>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline__line"><div class="timeline__fill" id="timelineFill"></div></div>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-meta">
+          <span class="tl-icon"><i class="fa-solid fa-earth-asia"></i></span>
+          <p class="mono tl-date"><span class="fr">Juin - sept. 2026</span><span class="en">Jun - Sep 2026</span></p>
+        </div>
+        <div class="tl-card">
+          <h3><span class="fr">Stage international, développeur full-stack</span><span class="en">International internship, full-stack developer</span></h3>
+          <p class="tl-org"><span class="fr">Université de Tien Giang, faculté d'ingénierie et de technologie, My Tho, Vietnam</span><span class="en">Tien Giang University, Faculty of Engineering and Technology, My Tho, Vietnam</span></p>
+          <ul>
+            <li class="fr">Reprise et extension du système d'information de la faculté, en Laravel et MySQL.</li>
+            <li class="en">Took over and extended the faculty's information system, with Laravel and MySQL.</li>
+            <li class="fr">Projet mené en trois phases validées par ma tutrice : audit et corrections, nouveaux modules, tests et sécurisation.</li>
+            <li class="en">Project run in three phases approved by my supervisor: audit and fixes, new modules, testing and hardening.</li>
+            <li class="fr">Échanges quotidiens en anglais avec l'équipe de la faculté, recette avec le personnel, les enseignants et les étudiants.</li>
+            <li class="en">Daily communication in English with the faculty team, acceptance testing with staff, lecturers and students.</li>
+          </ul>
+          <ul class="tags mono"><li>Laravel</li><li>PHP</li><li>MySQL</li><li><span class="fr">Anglais</span><span class="en">English</span></li></ul>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-meta">
+          <img src="asset/CECLANT.webp" alt="" class="tl-logo">
+          <p class="mono tl-date"><span class="fr">Depuis sept. 2024</span><span class="en">Since Sep 2024</span></p>
+        </div>
+        <div class="tl-card">
+          <h3><span class="fr">Développeur d'applications web</span><span class="en">Web application developer</span></h3>
+          <p class="tl-org"><span class="fr">Marine nationale, laboratoire numérique, Brest · Apprentissage</span><span class="en">French Navy, digital laboratory, Brest · Apprenticeship</span></p>
+          <ul>
+            <li class="fr">Développement et amélioration d'applications web internes en Angular, Node.js et PHP.</li>
+            <li class="en">Development and improvement of internal web applications with Angular, Node.js and PHP.</li>
+            <li class="fr">Gestion, optimisation et administration des bases de données MySQL et PostgreSQL.</li>
+            <li class="en">Management, optimisation and administration of MySQL and PostgreSQL databases.</li>
+            <li class="fr">Conteneurisation, déploiement et maintenance des environnements applicatifs avec Docker.</li>
+            <li class="en">Containerisation, deployment and maintenance of application environments with Docker.</li>
+            <li class="fr">Amélioration des performances, refactorisation du code et correction de bugs.</li>
+            <li class="en">Performance improvements, code refactoring and bug fixing.</li>
+            <li class="fr">Analyse des besoins utilisateurs et rédaction de la documentation technique.</li>
+            <li class="en">User requirements analysis and technical documentation.</li>
+          </ul>
+          <ul class="tags mono"><li>Angular</li><li>Node.js</li><li>PHP</li><li>MySQL</li><li>PostgreSQL</li><li>Docker</li></ul>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-meta">
+          <img src="asset/SCA.webp" alt="" class="tl-logo">
+          <p class="mono tl-date"><span class="fr">Sept. 2022 - août 2024</span><span class="en">Sep 2022 - Aug 2024</span></p>
+        </div>
+        <div class="tl-card">
+          <h3><span class="fr">Technicien informatique</span><span class="en">IT technician</span></h3>
+          <p class="tl-org"><span class="fr">Ministère des Armées, GSBDD Brest-Lorient · Apprentissage</span><span class="en">Ministry of the Armed Forces, GSBDD Brest-Lorient · Apprenticeship</span></p>
+          <ul>
+            <li class="fr">Mise en place d'une nouvelle arborescence réseau pour 1 500 utilisateurs.</li>
+            <li class="en">Set up a new network folder structure for 1,500 users.</li>
+            <li class="fr">Installation et configuration de systèmes d'exploitation sur des réseaux non protégés et Diffusion Restreinte.</li>
+            <li class="en">Installation and configuration of operating systems on unclassified and restricted networks.</li>
+            <li class="fr">Sécurité informatique et mesures de protection des données.</li>
+            <li class="en">IT security and data protection measures.</li>
+            <li class="fr">Maintenance, résolution d'incidents et suivi des tickets, en lien avec le CIRISI et la DIRISI.</li>
+            <li class="en">Maintenance, troubleshooting and ticket tracking, working with CIRISI and DIRISI.</li>
+            <li class="fr">Formation et accompagnement des utilisateurs ; scripts VBA sous Excel.</li>
+            <li class="en">User training and support; VBA scripts in Excel.</li>
+          </ul>
+          <ul class="tags mono"><li>Support</li><li><span class="fr">Sécurité</span><span class="en">Security</span></li><li><span class="fr">Réseau</span><span class="en">Network</span></li><li>VBA</li></ul>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="section__title section__title--sub reveal"><span class="fr">Formation</span><span class="en">Education</span></h2>
+
+    <div class="education">
+      <article class="edu reveal">
+        <p class="mono edu__date"><span class="fr">Depuis 2024</span><span class="en">Since 2024</span></p>
+        <h3><span class="fr">Diplôme d'ingénieur généraliste</span><span class="en">General engineering degree</span></h3>
+        <p class="edu__school">ISEN Brest</p>
+        <p class="fr">Cycle ingénieur par apprentissage, en alternance à la Marine nationale, avec un stage international au Vietnam.</p>
+        <p class="en">Apprenticeship engineering programme, alternating with the French Navy, including an international internship in Vietnam.</p>
+      </article>
+      <article class="edu reveal">
+        <p class="mono edu__date">2022 - 2024</p>
+        <h3>BTS SIO, option SLAM</h3>
+        <p class="edu__school"><span class="fr">Pôle BTS Alternance, Brest</span><span class="en">Pôle BTS Alternance, Brest</span></p>
+        <p class="fr">Services informatiques aux organisations, solutions logicielles et applications métiers. En alternance au ministère des Armées.</p>
+        <p class="en">IT services for organisations, software solutions and business applications. Work-study at the Ministry of the Armed Forces.</p>
+      </article>
+      <article class="edu reveal">
+        <p class="mono edu__date">2019 - 2022</p>
+        <h3><span class="fr">Baccalauréat général</span><span class="en">French baccalaureate</span></h3>
+        <p class="edu__school">Lycée Sainte-Anne, Brest</p>
+        <p class="fr">Spécialités mathématiques et sciences de l'ingénieur. Parcours international en seconde, avec la quasi-totalité des cours en anglais.</p>
+        <p class="en">Mathematics and engineering science majors. International track in the first year, with almost all classes taught in English.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container split">
+    <div class="reveal">
+      <h2 class="section__title">Contact</h2>
+      <p class="contact__text fr">Pour une offre d'emploi, un projet ou une question, vous pouvez m'écrire via ce formulaire ou directement par e-mail.</p>
+      <p class="contact__text en">For a job offer, a project or a question, you can write to me using this form or directly by email.</p>
+      <ul class="contact__list">
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:vhamelindev@gmail.com">vhamelindev@gmail.com</a></li>
+        <li><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/victor-hamelin9/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><i class="fa-brands fa-github"></i><a href="https://github.com/Vixa-9" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+
+    <form class="form reveal" id="contactForm" novalidate>
+      <div class="hp" aria-hidden="true">
+        <label for="honeypot">Ne pas remplir</label>
+        <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="name"><span class="fr">Nom</span><span class="en">Name</span></label>
+        <input type="text" id="name" name="name" required maxlength="100" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required maxlength="200" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required maxlength="5000"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary"><span class="fr">Envoyer</span><span class="en">Send</span></button>
+      <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year">2026</span> Victor Hamelin</p>
+    <ul class="footer__links">
+      <li><a href="https://github.com/Vixa-9" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/victor-hamelin9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      <li><a href="mailto:vhamelindev@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
