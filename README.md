@@ -163,4 +163,4 @@ Dokploy reconstruit l'image et remplace le conteneur. Le suivi est dans Dokploy 
 
 ## Crédits
 
-Faces des dés de Norndice rendues à partir des modèles « Norndice Dice Game » de un auteur tiers (CC BY-NC).
+Faces des dés de Norndice : rendues par le générateur de modèles de Norndice (dessinées par le code).
