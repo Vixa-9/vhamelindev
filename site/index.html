@@ -297,6 +297,49 @@
 
     <div class="projects">
 
+      <article class="project project--stacked reveal">
+        <div class="project__visual gallery gallery--browser" data-gallery>
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>castleheist.fr</span></div>
+          <div class="gallery__track">
+            <img src="asset/projets/castleheist/accueil.jpg" alt="Page d'accueil de Castle Heist" loading="lazy">
+            <img src="asset/projets/castleheist/raid.jpg" alt="Un voleur pille un donjon piégé : scie, piques et canon" loading="lazy">
+            <img src="asset/projets/castleheist/construction.jpg" alt="Phase de construction du château" loading="lazy">
+          </div>
+          <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="gallery__btn gallery__btn--next" type="button" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="gallery__dots"></div>
+        </div>
+        <div class="project__body">
+          <p class="project__meta mono">
+            <span class="project__badge"><span class="fr">Projet phare</span><span class="en">Featured project</span></span>
+            <span class="fr">2026 · Projet personnel</span><span class="en">2026 · Personal project</span>
+          </p>
+          <h3>Castle Heist</h3>
+          <p class="fr">
+            Jeu de plateforme 2D multijoueur, de 2 à 6 joueurs : chacun piège son château, puis tente de piller le coffre
+            des autres. Campagne solo, donjons créés par la communauté, amis, passe de combat et plus de cent skins.
+          </p>
+          <p class="en">
+            Multiplayer 2D platformer for 2 to 6 players: each one traps their castle, then tries to loot everyone
+            else's chest. Solo campaign, community-made dungeons, friends, battle pass and over a hundred skins.
+          </p>
+          <ul class="points">
+            <li class="fr">Moteur de plateforme en JavaScript sur canvas, partagé par le client et le serveur : le serveur rejoue les touches de chaque raid pour valider les réussites et empêcher la triche.</li>
+            <li class="en">JavaScript platformer engine on canvas, shared by client and server: the server replays each raid's inputs to validate wins and prevent cheating.</li>
+            <li class="fr">Serveur Node.js sans framework, parties en temps réel par Server-Sent Events, bots qui construisent et pillent.</li>
+            <li class="en">Framework-free Node.js server, real-time games over Server-Sent Events, bots that build and raid.</li>
+            <li class="fr">Éditeur de niveaux, campagne de 25 donjons vérifiés par le bot, tirages des butins côté serveur et espace d'administration complet.</li>
+            <li class="en">Level editor, 25-dungeon campaign checked by the bot, server-side loot draws and a full admin area.</li>
+            <li class="fr">Comptes avec PostgreSQL et Prisma, mots de passe argon2, jetons JWT, déploiement Docker.</li>
+            <li class="en">Accounts with PostgreSQL and Prisma, argon2 passwords, JWT tokens, Docker deployment.</li>
+          </ul>
+          <ul class="tags mono"><li>JavaScript</li><li>Canvas</li><li>Node.js</li><li>SSE</li><li>PostgreSQL</li><li>Prisma</li><li>Docker</li></ul>
+          <a href="https://castleheist.fr" target="_blank" rel="noopener" class="btn btn--small">
+            <span class="fr">Voir le site</span><span class="en">Visit site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
       <article class="project project--wide reveal">
         <div class="project__visual project__visual--norn" aria-hidden="true">
           <div class="scene3d">
@@ -374,46 +417,6 @@
           </ul>
           <ul class="tags mono"><li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>Socket.io</li><li>Docker</li></ul>
           <a href="https://leworduel.fr" target="_blank" rel="noopener" class="btn btn--small">
-            <span class="fr">Voir le site</span><span class="en">Visit site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-      </article>
-
-      <article class="project project--stacked reveal">
-        <div class="project__visual gallery gallery--browser" data-gallery>
-          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>castleheist.fr</span></div>
-          <div class="gallery__track">
-            <img src="asset/projets/castleheist/raid.jpg" alt="Un voleur pille un donjon piégé : scie, piques et canon" loading="lazy">
-            <img src="asset/projets/castleheist/accueil.jpg" alt="Page d'accueil de Castle Heist" loading="lazy">
-            <img src="asset/projets/castleheist/construction.jpg" alt="Phase de construction du château" loading="lazy">
-          </div>
-          <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
-          <button class="gallery__btn gallery__btn--next" type="button" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
-          <div class="gallery__dots"></div>
-        </div>
-        <div class="project__body">
-          <p class="project__meta mono"><span class="fr">2026 · Projet personnel</span><span class="en">2026 · Personal project</span></p>
-          <h3>Castle Heist</h3>
-          <p class="fr">
-            Jeu de plateforme 2D multijoueur, de 2 à 6 joueurs : chacun piège son château, puis tente de piller le coffre
-            des autres. Campagne solo, donjons créés par la communauté, amis, passe de combat et plus de cent skins.
-          </p>
-          <p class="en">
-            Multiplayer 2D platformer for 2 to 6 players: each one traps their castle, then tries to loot everyone
-            else's chest. Solo campaign, community-made dungeons, friends, battle pass and over a hundred skins.
-          </p>
-          <ul class="points">
-            <li class="fr">Moteur de plateforme en JavaScript sur canvas, partagé par le client et le serveur : le serveur rejoue les touches de chaque raid pour valider les réussites et empêcher la triche.</li>
-            <li class="en">JavaScript platformer engine on canvas, shared by client and server: the server replays each raid's inputs to validate wins and prevent cheating.</li>
-            <li class="fr">Serveur Node.js sans framework, parties en temps réel par Server-Sent Events, bots qui construisent et pillent.</li>
-            <li class="en">Framework-free Node.js server, real-time games over Server-Sent Events, bots that build and raid.</li>
-            <li class="fr">Éditeur de niveaux, campagne de 25 donjons vérifiés par le bot, tirages des butins côté serveur et espace d'administration complet.</li>
-            <li class="en">Level editor, 25-dungeon campaign checked by the bot, server-side loot draws and a full admin area.</li>
-            <li class="fr">Comptes avec PostgreSQL et Prisma, mots de passe argon2, jetons JWT, déploiement Docker.</li>
-            <li class="en">Accounts with PostgreSQL and Prisma, argon2 passwords, JWT tokens, Docker deployment.</li>
-          </ul>
-          <ul class="tags mono"><li>JavaScript</li><li>Canvas</li><li>Node.js</li><li>SSE</li><li>PostgreSQL</li><li>Prisma</li><li>Docker</li></ul>
-          <a href="https://castleheist.fr" target="_blank" rel="noopener" class="btn btn--small">
             <span class="fr">Voir le site</span><span class="en">Visit site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>

@@ -348,6 +348,7 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -.02em; font-weight: 600; }
 
 .project__body { padding: 32px; display: flex; flex-direction: column; flex: 1; }
 .project__meta { font-size: .76rem; color: var(--text-3); margin-bottom: 8px; }
+.project__badge { display: inline-block; margin-right: 10px; padding: 2px 9px; border-radius: 999px; font-weight: 600; color: var(--accent-ink); background: var(--accent); }
 .project h3 { font-size: 1.45rem; margin-bottom: 12px; }
 .project__body > p { color: var(--text-2); font-size: .95rem; }
 
