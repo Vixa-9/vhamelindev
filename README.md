@@ -15,7 +15,7 @@ qui gère aussi le formulaire de contact.
 | Accueil | Présentation, poste actuel, formation, langues, localisation |
 | Profil | Parcours, course des 20 km de Paris pour le SCA, passions |
 | Compétences | Front-end, back-end, autres langages, bases de données, DevOps, systèmes |
-| Projets | Norndice, Worduel, système d'information de la faculté de Tien Giang (Vietnam), Goal Calendar, Biblio-Drive |
+| Projets | Norndice, Worduel, Castle Heist, système d'information de la faculté de Tien Giang (Vietnam), Goal Calendar, Biblio-Drive |
 | Expérience | Stage international au Vietnam, Marine nationale, ministère des Armées |
 | Formation | ISEN Brest, BTS SIO SLAM, baccalauréat |
 | Contact | Formulaire envoyé par e-mail, liens LinkedIn et GitHub |
